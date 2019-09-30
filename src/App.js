@@ -5,6 +5,7 @@ import '../src/assets/css/main.css'
 import { Switch, Route} from 'react-router-dom';
 import ResetPassword from './containers/ResetPassword';
 import Login from './containers/Login';
+import Dashboard from './containers/Dashboard';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
        <Switch>
             <Route exact path='/' component={Login}/>
             <Route exact path='/resetpassword' component={ResetPassword}/>
+            <Route exact path='/dashboard' component={Dashboard}/>
       </Switch>
     </div>
   );

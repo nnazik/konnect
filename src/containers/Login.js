@@ -7,8 +7,7 @@ class login extends Component {
 
     render() {
         return (
-            <div>
-                <a href="C-KIP.html" className="ui button basic nextPage">Next</a>
+            <body class="notLogin">
                 <div className="ui grid middle aligned center aligned">
                     <div className="column minContainer">
                         <h2 className="segmentTitle">
@@ -30,7 +29,8 @@ class login extends Component {
 
                             </div>
                             <div className="field">
-                                <div className="ui submit button fluid">Login</div>
+                                {/* <div className="ui submit button fluid">Login</div> */}
+                                <Link  className="ui submit button fluid" as={Link} to="/dashboard">Login</Link>
                             </div>
                             <div className="field">
                                 <a href="C-KIP.html" className="ui button basic fluid blue">Create profile</a>
@@ -46,7 +46,7 @@ class login extends Component {
                     
                     </div>
                 </div>
-            </div>
+            </body>
 
         );
 
