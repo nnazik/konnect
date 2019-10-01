@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import '../assets/css/main.css';
-import 'react-calendar/dist/Calendar'
-import 'clndr/src/clndr'
+import 'react-calendar/dist/Calendar';
+import 'clndr/src/clndr';
 
 class dashboardEvent extends Component {
 
@@ -47,6 +47,9 @@ class dashboardEvent extends Component {
                                     <div className="clndr-controls top">
                                         <div className="clndr-previous-button"><i className="caret left icon"></i></div>
                                         <div className="clndr-next-button"><i className="caret right icon"></i></div>
+                                    </div>
+                                    <div class="clearfix">
+                                        
                                     </div>
                                 </script>
                             </div>

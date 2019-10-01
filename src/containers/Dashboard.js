@@ -3,7 +3,8 @@ import 'semantic-ui-css/semantic.min.css';
 import '../assets/css/main.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import DashboardEvent from '../containers/DashboardEvent';
+// import DashboardEvent from '../containers/DashboardEvent';
+import PlatformSearch from '../containers/PlatformSearch';
 
 class dashboard extends Component {
 
@@ -12,10 +13,11 @@ class dashboard extends Component {
             <div className="pusher">
                 <div className="mainContainer">
                     <div className="actionBar">
-                        <Header />
+                        <Header/>
                     </div>
                     <div className="mainContent">
-                            <DashboardEvent></DashboardEvent>
+                        {/* <DashboardEvent/> */}
+                        <PlatformSearch/>
                     </div>
                 </div>
                 <footer>
