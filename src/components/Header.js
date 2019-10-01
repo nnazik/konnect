@@ -57,6 +57,10 @@ class header extends Component {
                                 <i className="cog icon"></i>
                             </div>
                         </div>
+                        <ul className="subMenu">
+                            <li><a href="MP.html">Edit Profile</a></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
                     </div>
                 </div>
             </header>

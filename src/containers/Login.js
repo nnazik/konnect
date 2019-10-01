@@ -7,7 +7,7 @@ class login extends Component {
 
     render() {
         return (
-            <body class="notLogin">
+            <body className="notLogin">
                 <div className="ui grid middle aligned center aligned">
                     <div className="column minContainer">
                         <h2 className="segmentTitle">
