@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ProfileImage from '../assets/img/profile.png';
+import { Link } from 'react-router-dom';
 
 class header extends Component {
 
@@ -14,21 +15,24 @@ class header extends Component {
             <header className="hideMobile">
                 <div className="ui grid">
                     <div className="three wide column center aligned middle aligned">
-                        <h1><a href="dashboard-events-01.html">konnect</a></h1>
+                        {/* <h1><a href="dashboard-events-01.html">konnect</a></h1> */}
+                        <h1><Link to="/dashboard">konnect</Link></h1>
                     </div>
                     <div className="ten wide column paddingL0 paddingR0">
                         <ul className="ui five column grid stackable mainMenu">
                             <li className="column center aligned middle aligned itemMenu">
-                                <a href="CE-01.html"><i className="plus circle icon"></i>Create Event</a>
+                                <Link to="/createevent"><i className="plus circle icon"></i>Create Event</Link>
                             </li>
                             <li className="column center aligned middle aligned itemMenu">
-                                <a href="SKP.html"><i className="search icon"></i>Platform Search</a>
+                                {/* <a href="SKP.html"><i className="search icon"></i>Platform Search</a> */}
+                                <Link to="/platformsearch"><i className="search icon"></i>Platform Search</Link>
                             </li>
                             <li className="column center aligned middle aligned itemMenu">
                                 <a className="inviteByEmailBtn hasModal" data-modal="inviteByEmail"><i className="user plus icon"></i>Invite Colleagues</a>
                             </li>
                             <li className="column center aligned middle aligned itemMenu">
-                                <a href="AB-01.html"><i className="address book icon"></i>Manage Connections</a>
+                                {/* <a href="AB-01.html"><i className="address book icon"></i>Manage Connections</a> */}
+                                <Link to="/manageconnection"><i className="address book icon"></i>Manage Connections</Link>
                             </li>
                             <li className="column center aligned middle aligned itemMenu">
                                 <span className="displaySubMenu"><i className="building icon"></i>Manage Company</span>

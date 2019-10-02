@@ -24,6 +24,10 @@ body {
   margin: 0;
 }
 
+body .ui{
+  border: 1px solid red;
+}
+
 /**
  * Render the `main` element consistently in IE.
  */
