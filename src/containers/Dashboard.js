@@ -4,7 +4,8 @@ import '../assets/css/main.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 // import DashboardEvent from '../containers/DashboardEvent';
-import PlatformSearch from '../containers/PlatformSearch';
+//import PlatformSearch from '../containers/PlatformSearch';
+import ManageConnection from '../containers/ManageConnections';
 
 class dashboard extends Component {
 
@@ -17,7 +18,8 @@ class dashboard extends Component {
                     </div>
                     <div className="mainContent">
                         {/* <DashboardEvent/> */}
-                        <PlatformSearch/>
+                        {/* <PlatformSearch/> */}
+                        <ManageConnection/>
                     </div>
                 </div>
                 <footer>
