@@ -34,7 +34,7 @@ const panes = [
   },
   {
     menuItem: { key: 'timeline', icon: 'clock', content: 'TIMELINE' },
-    render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane>,
+    render: () => <Tab.Pane attached={false}>Event Timeline Content</Tab.Pane>,
   },
 ]
 

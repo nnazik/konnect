@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ProfileImage from '../assets/img/profile.png';
 import { Link } from 'react-router-dom';
+import InviteColleaguesModel from './InviteColleaguesModel';
 
 class header extends Component {
 
@@ -28,7 +29,8 @@ class header extends Component {
                                 <Link to="/platformsearch"><i className="search icon"></i>Platform Search</Link>
                             </li>
                             <li className="column center aligned middle aligned itemMenu">
-                                <a className="inviteByEmailBtn hasModal" data-modal="inviteByEmail"><i className="user plus icon"></i>Invite Colleagues</a>
+                                {/* <a className="inviteByEmailBtn hasModal" data-modal="inviteByEmail"><i className="user plus icon"></i>Invite Colleagues</a> */}
+                                <InviteColleaguesModel Name="Nazik" AdminName="David" CompanyName="Apple.co"/>
                             </li>
                             <li className="column center aligned middle aligned itemMenu">
                                 {/* <a href="AB-01.html"><i className="address book icon"></i>Manage Connections</a> */}

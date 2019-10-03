@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import proImg from '../assets/img/joe.jpg';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import ManageConnectionTab from  '../components/ManageConnectionTab';
 
 class manageConnections extends Component {
 
@@ -43,88 +43,7 @@ class manageConnections extends Component {
                                                 <div className="sixteen wide column left aligned">
                                                     <h3 className="ui dividing header">Address Book</h3>
                                                     <div className="abPeopleCompanies">
-                                                        <div className="ui pointing secondary menu tabsNav">
-                                                            <a className="active item" data-tab="people">People</a>
-                                                            <a className="item" data-tab="companies">Companies</a>
-                                                        </div>
-                                                        <div className="ui active tab" data-tab="people">
-                                                            <div className="ui search searchPeople marginT20 marginB20">
-                                                                <div className="ui fluid icon input">
-                                                                    <input className="prompt" type="text" placeholder="Search" />
-                                                                    <i className="search icon"></i>
-                                                                </div>
-                                                                <div className="results"></div>
-                                                            </div>
-                                                            <div className="ui three column grid stackable">
-                                                                <div className="column">
-                                                                    <div className="ui fluid card">
-                                                                        <div className="content">
-                                                                            <span className="ui blue right corner label popupNotes" data-content="Private Contact">
-                                                                                <i className="address card outline icon"></i>
-                                                                            </span>
-                                                                            <img className="right floated mini ui image circular" alt="" src={proImg} />
-                                                                            <div className="header">
-                                                                                <a href="/VPP.html" target="">{this.state.Name}</a>
-                                                                            </div>
-                                                                            <div className="meta">
-                                                                                {this.state.Headline}
-                                                                            </div>
-                                                                            <div className="description">
-                                                                                mail@mail.com<br />
-                                                                                1234 5678
-                                                                </div>
-                                                                        </div>
-                                                                        <div className="extra content">
-                                                                            <div className="ui grid">
-                                                                                <div className="ten wide column">
-                                                                                    <div className="ui circular compact mini basic button confirmRemove hasModal active" data-modal="removeModal"><i className="star icon"></i>Remove from connections</div>
-                                                                                </div>
-                                                                                <div className="six wide column right aligned">
-                                                                                    <div className="ui circular compact mini basic icon button editProfileBtn"><i className="pencil alternate icon"></i></div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="ui tab" data-tab="companies">
-                                                            <div className="ui search searchCompany marginT20 marginB20">
-                                                                <div className="ui fluid icon input">
-                                                                    <input className="prompt" type="text" placeholder="Search" />
-                                                                    <i className="search icon"></i>
-                                                                </div>
-                                                                <div className="results"></div>
-                                                            </div>
-                                                            <div className="ui three column grid stackable">
-                                                                <div className="column">
-                                                                    <div className="ui fluid card">
-                                                                        <div className="content">
-                                                                            <span className="ui blue right corner label popupNotes" data-content="Private Contact">
-                                                                                <i className="address card outline icon"></i>
-                                                                            </span>
-                                                                            <img className="right floated mini ui image circular" alt="" src={proImg}></img>
-                                                                            <div className="header">
-                                                                                <a href="/VCP.html" target="_blank">{this.state.Name}</a>
-                                                                            </div>
-                                                                            <div className="meta">
-                                                                                <a href="https://goo.gl/maps/n4DPECjGtgno53FL9" target=""><i className="map marker alternate icon"></i>Sydney</a><span> |</span><i className="phone icon"></i>9876 5432 </div>
-                                                                            <div className="description"></div>
-                                                                        </div>
-                                                                        <div className="extra content">
-                                                                            <div className="ui grid">
-                                                                                <div className="ten wide column">
-                                                                                    <div className="ui circular compact mini basic button confirmRemove hasModal active" data-modal="removeModal"><i className="star icon"></i>Remove from connections</div>
-                                                                                </div>
-                                                                                <div className="six wide column right aligned">
-                                                                                    <div className="ui circular compact mini basic icon button editProfileBtn"><i className="pencil alternate icon"></i></div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                      <ManageConnectionTab/>
                                                     </div>
                                                 </div>
                                             </div>
