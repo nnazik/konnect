@@ -9,6 +9,8 @@ import CreateEvent from './containers/CreateEvent';
 import DashboardEvent from './containers/DashboardEvent';
 import PlatformSearch from './containers/PlatformSearch';
 import ManageConnections from './containers/ManageConnections';
+import CompanyProfile from './containers/CompanyProfile';
+import ManageColleagues from './containers/ManageColleagues';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
             <Route exact path='/dashboard' component={DashboardEvent}/>
             <Route exact path='/platformsearch' component={PlatformSearch}/>
             <Route exact path='/manageconnection' component={ManageConnections}/>
+            <Route exact path='/companyprofile' component={CompanyProfile}/>
+            <Route exact path="/managecolleague" component={ManageColleagues}/>
       </Switch>
     </div>
   );

@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
+import {findDOMNode} from 'react-dom';
 import ProfileImage from '../assets/img/profile.png';
 import { Link } from 'react-router-dom';
 import InviteColleaguesModel from './InviteColleaguesModel';
+import ChangeCompanyDropdown from './ChangeCompanyDropdown';
 
 class header extends Component {
 
@@ -9,6 +12,16 @@ class header extends Component {
         Name: "John Dev",
         Company1: "MAS",
         Company2: "Hemas"
+    }
+
+    handleProfileToggle=()=>{
+        const el = findDOMNode(this.refs.ProfileToggle);
+        $(el).slideToggle();
+    }
+
+    handleManageCompanyToggle=()=>{
+        const el = findDOMNode(this.refs.CompanyToggle);
+        $(el).slideToggle();
     }
 
     render() {
@@ -36,11 +49,11 @@ class header extends Component {
                                 {/* <a href="AB-01.html"><i className="address book icon"></i>Manage Connections</a> */}
                                 <Link to="/manageconnection"><i className="address book icon"></i>Manage Connections</Link>
                             </li>
-                            <li className="column center aligned middle aligned itemMenu">
+                            <li onClick={this.handleManageCompanyToggle} className="column center aligned middle aligned itemMenu">
                                 <span className="displaySubMenu"><i className="building icon"></i>Manage Company</span>
-                                <ul className="subMenu">
-                                    <li><a href="MC.html">Company Profile</a></li>
-                                    <li><a href="IC-01.html">Manage Colleagues</a></li>
+                                <ul ref="CompanyToggle" className="subMenu">
+                                    <li><Link to="/companyprofile">Company Profile</Link></li>
+                                    <li><Link to="/managecolleague">Manage Colleagues</Link></li>
                                 </ul>
                             </li>
                         </ul>
@@ -50,22 +63,23 @@ class header extends Component {
                             <img src={ProfileImage} alt="" className="ui fluid image circular"></img>
                             <div className="headerCompanySelector">
                                 <span className="userName">{this.state.Name}</span>
-                                <div className="ui dropdown dropdownChangeCompany">
+                                <ChangeCompanyDropdown/>
+                                {/* <div className="ui dropdown dropdownChangeCompany">
                                     <div className="text">{this.state.Company1}</div>
                                     <i className="dropdown icon"></i>
                                     <div className="menu">
                                         <div className="item">{this.state.Company1}</div>
                                         <div className="item">{this.state.Company2}</div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
-                            <div className="ui button mini circular compact icon displaySettings">
+                            <div onClick={this.handleProfileToggle} className="ui button mini circular compact icon displaySettings">
                                 <i className="cog icon"></i>
                             </div>
                         </div>
-                        <ul className="subMenu">
+                        <ul ref="ProfileToggle" className="subMenu">
                             <li><a href="MP.html">Edit Profile</a></li>
-                            <li><a href="login.html">Logout</a></li>
+                            <li><Link to="/">Logout</Link></li>
                         </ul>
                     </div>
                 </div>

@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import '../assets/css/main.css';
-import 'react-calendar/dist/Calendar';
-import 'clndr/src/clndr';
+// import $ from 'jquery';
+// import Moment from 'react-moment';
+// import map from 'underscore';
+import 'react-calendar';
+import 'clndr/';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -52,7 +55,7 @@ class dashboardEvent extends Component {
                                         <div className="visibleMobile marginB60"></div>
                                         <div className="ui segment">
                                             <div className="dashboardCalendar clearCalendar">
-                                                <script type="text/template" id="template-calendar-months">
+                                                {/* <script type="text/template" id="template-calendar-months"> */}
                                                     <div className="clndr-controls top">
                                                         <div className="clndr-previous-button"><i className="caret left icon"></i></div>
                                                         <div className="clndr-next-button"><i className="caret right icon"></i></div>
@@ -60,7 +63,7 @@ class dashboardEvent extends Component {
                                                     <div className="clearfix">
 
                                                     </div>
-                                                </script>
+                                                {/* </script> */}
                                             </div>
                                         </div>
                                     </div>
