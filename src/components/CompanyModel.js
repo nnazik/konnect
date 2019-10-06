@@ -5,7 +5,7 @@ import '../assets/css/main.css';
 const InviteColleaguesModel = (props) => (
     <Modal trigger={<a className="inviteByEmailBtn hasModal"><i className="user plus icon"></i>Invite Colleagues</a>} closeIcon>
         <Modal.Header>Invite Colleague</Modal.Header>
-        <Modal.Content>
+        <Modal.Content image>
             <Modal.Description>
                 <form className="ui form">
                     <div className="ui grid">

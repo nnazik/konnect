@@ -33,7 +33,7 @@ class login extends Component {
                                 <Link  className="ui submit button fluid" as={Link} to="/dashboard">Login</Link>
                             </div>
                             <div className="field">
-                                <a href="C-KIP.html" className="ui button basic fluid blue">Create profile</a>
+                            <Link className="ui button basic fluid blue" as={Link} to= "/CreateKenetProfile" >Create profile</Link>
                             </div>
 
                             <div className="ui error message"></div>
@@ -41,7 +41,7 @@ class login extends Component {
                         </form>
 
                         < hr className="marginB10" />
-                        <Link  className="ui button basic fluid" as={Link} to="/resetpassword">Forgot password?</Link>
+                        <Link  className="ui button basic fluid" as={Link} to="/ResetPassword1">Forgot password?</Link>
                         {/* <a href={Link} as={Link} to="/resetpassword" className="ui button basic fluid">Forgot password?</a> */}
                     
                     </div>

@@ -7,7 +7,7 @@ import ProfileImg1 from '../assets/img/elliot.jpg';
 
 class ManageColleagues extends Component {
 
-    state = {
+    state = { 
         Name: 'Steve jobs'
     }
 
