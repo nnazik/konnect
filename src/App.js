@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import 'semantic-ui-css/semantic.min.css';
-import '../src/assets/css/main.css'
+import '../src/assets/css/main.css';
 import { Switch, Route } from 'react-router-dom';
 import Login from './containers/Login';
 import CreateEvent from './containers/CreateEvent';
@@ -15,6 +15,7 @@ import CreateKenetProfile from './containers/CreateKenetProfile';
 import ResetPassword2 from './containers/ResetPassword2';
 import ResetPassword3 from './containers/ResetPassword3';
 import CompanyTitle from './containers/CompanyTitle';
+import EditProfile from './containers/EditProfile';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route exact path='/manageconnection' component={ManageConnections} />
         <Route exact path='/companyprofile' component={CompanyProfile} />
         <Route exact path="/managecolleague" component={ManageColleagues} />
+        <Route exact path="/editprofile" component={EditProfile} />
       </Switch>
     </div>
   );

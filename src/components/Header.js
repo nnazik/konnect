@@ -78,7 +78,7 @@ class header extends Component {
                             </div>
                         </div>
                         <ul ref="ProfileToggle" className="subMenu">
-                            <li><a href="MP.html">Edit Profile</a></li>
+                            <li><Link to="/editprofile">Edit Profile</Link></li>
                             <li><Link to="/">Logout</Link></li>
                         </ul>
                     </div>

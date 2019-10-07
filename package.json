@@ -5,8 +5,6 @@
   "dependencies": {
     "axios": "^0.19.0",
     "clndr": "^1.5.0",
-    "fomantic-ui": "^2.7.8",
-    "fomantic-ui-css": "^2.7.8",
     "jquery": "^3.4.1",
     "moment": "^2.24.0",
     "node-sass": "^4.12.0",

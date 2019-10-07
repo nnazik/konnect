@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import 'semantic-ui-css/semantic.min.css';
-import '../assets/css/main.css';
 import { Link } from 'react-router-dom';
 
 class login extends Component {
