@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import 'semantic-ui-css/semantic.min.css';
-import '../../assets/css/main.css';
+import CompanyModel from '../CompanyModel';
 
 class EventSuppliers extends Component {
 
@@ -63,7 +62,8 @@ class EventSuppliers extends Component {
                                                     </div>
                                                     <div className="ui grid center aligned">
                                                         <div className="sixteen wide column">
-                                                            <div className="ui button basic blue fluid addClient hasModal" data-modal="client"><i className="plus circle icon"></i>Add Supplier</div>
+                                                            {/* <div className="ui button basic blue fluid addClient hasModal" data-modal="client"><i className="plus circle icon"></i>Add Supplier</div> */}
+                                                            <CompanyModel type="supplier"/>
                                                         </div>
                                                     </div>
                                                 </div>

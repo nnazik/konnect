@@ -1,0 +1,59 @@
+import React, { Component } from 'react'
+import { Accordion, Icon } from 'semantic-ui-react'
+import TimeWindow from './TimeWindow';
+
+export default class AccordionExampleStandard extends Component {
+    state = { activeIndex: 0 }
+
+    handleClick = (e, titleProps) => {
+        const { index } = titleProps
+        const { activeIndex } = this.state
+        const newIndex = activeIndex === index ? -1 : index
+
+        this.setState({ activeIndex: newIndex })
+    }
+
+    render() {
+        const { activeIndex } = this.state
+
+        return (
+            <Accordion className="ui styled fluid accordion parentAccordion">
+                <Accordion.Title
+                    active={activeIndex === 0}
+                    index={0}
+                    onClick={this.handleClick}
+                >
+                    <Icon name='dropdown' />
+                    Bump In
+                </Accordion.Title>
+                <Accordion.Content active={activeIndex === 0}>
+                    <TimeWindow type={"bumpin"}/>
+                </Accordion.Content>
+
+                <Accordion.Title
+                    active={activeIndex === 1}
+                    index={1}
+                    onClick={this.handleClick}
+                >
+                    <Icon name='dropdown' />
+                    Exhibition
+                </Accordion.Title>
+                <Accordion.Content active={activeIndex === 1}>
+                    <TimeWindow type={"exhibition"}/>
+                </Accordion.Content>
+
+                <Accordion.Title
+                    active={activeIndex === 2}
+                    index={2}
+                    onClick={this.handleClick}
+                >
+                    <Icon name='dropdown' />
+                    Bump Out
+                </Accordion.Title>
+                <Accordion.Content active={activeIndex === 2}>
+                    <TimeWindow type={"bumpout"}/>
+                </Accordion.Content>
+            </Accordion>
+        )
+    }
+}

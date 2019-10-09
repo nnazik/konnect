@@ -2,59 +2,104 @@ import React from 'react'
 import { Modal } from 'semantic-ui-react'
 import '../assets/css/main.css';
 
-const InviteColleaguesModel = (props) => (
-    <Modal trigger={<a className="inviteByEmailBtn hasModal"><i className="user plus icon"></i>Invite Colleagues</a>} closeIcon>
-        <Modal.Header>Invite Colleague</Modal.Header>
-        <Modal.Content image>
+const CompanyModel = (props) => (
+    
+    
+    <Modal trigger={<div className="ui button basic blue fluid addClient hasModal" data-modal="client"><i className="plus circle icon"></i>
+    {(() => {
+          switch(props.type) {
+            case "client": return 'Add Client';
+            case "manager": return 'Add Management Company';
+            case "venue": return 'Add Venue';
+            case "supplier": return 'Add Supplier';
+            case "exhibitor": return 'Add Exhibitor';
+            default: return 'Add'
+          }
+        })()}
+    </div>} closeIcon>
+        <Modal.Header><div className="header">Search for Company</div></Modal.Header>
+        <Modal.Content>
             <Modal.Description>
-                <form className="ui form">
-                    <div className="ui grid">
-                        <div className="sixteen wide column">
-                            <div className="two fields">
-                                <div className="field">
-                                    <label>Name</label>
-                                    <input type="text" name="" placeholder="Name" />
+                <div className="ui grid">
+                    <div className="sixteen wide column">
+                        <div className="field">
+                            <div className="ui search searchCompany">
+                                <div className="ui fluid icon input">
+                                    <input className="prompt" type="text" placeholder="Search" />
+                                    <i className="search icon"></i>
                                 </div>
-                                <div className="field">
-                                    <label>Email</label>
-                                    <input type="text" name="" placeholder="Email" />
-                                </div>
-                            </div>
-                            <div className="field">
-                                <label>Position</label>
-                                <input type="text" name="" placeholder="Position" />
-                            </div>
-                            <div className="field">
-                                <label>Message</label>
-                                <div className="editableArea">
-                                    <p>Hi {props.Name},</p>
-                                    <p>{props.AdminName} would like to invite you to join the company, {props.CompanyName} on the Konnect Platform to assist manage and deliver events.</p>
-                                    <p>To accept the invite and create a profile use the URL below:</p>
-                                    <p><a href="#">https://www.konnect.com/hjgdfa6tr4wqnu9mfuiwd87wi</a>
-                                    </p>
-                                    <p>Regards<br></br>Konnect</p>
-                                </div>
-                            </div>
-                            <div className="field">
-                                <p>People that you invite as colleagues will be able to see, access and edit any
-                            event related to this company.</p>
-                                <p>If you want to add an external person to assist with a specific event you can
-                            do so by adding them as crew during the event set up process.</p>
+                                <div className="results"></div>
                             </div>
                         </div>
                     </div>
-                </form>
+                    <div className="sixteen wide column center aligned">
+                        <div className="field">
+                            <button className="ui button">Add Selected</button>
+                        </div>
+                    </div>
+                    <div className="sixteen wide column">
+                        <p>If you cannot find the company you are searching for they probably do not have a company profile in
+                            Konnect. You can create an address book card with details you can use in the event now, and invite them
+                    to create a profile by filling out the details below.</p>
+                    </div>
+                    <div className="sixteen wide column">
+                        <h3>Invite New Company</h3>
+                        <form className="ui form">
+                            <div className="field required">
+                                <label>Name</label>
+                                <input type="text" name="" placeholder="Name" />
+                            </div>
+                            <div className="two fields">
+                                <div className="field required">
+                                    <label>Country</label>
+                                    <select className="ui fluid dropdown">
+                                        <option value="">Select Country</option>
+                                        <option value="AF">Afghanistan</option>
+                                        <option value="AX">Åland Islands</option>
+                                        <option value="AL">Albania</option>
+                                        <option value="DZ">Algeria</option>
+                                        <option value="AS">American Samoa</option>
+                                        <option value="AD">Andorra</option>
+                                        <option value="AO">Angola</option>
+                                        <option value="AI">Anguilla</option>
+                                        <option value="AQ">Antarctica</option>
+                                        <option value="AG">Antigua and Barbuda</option>
+                                        <option value="AR">Argentina</option>
+                                        <option value="AM">Armenia</option>
+                                        <option value="AW">Aruba</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="AT">...</option>
+                                    </select>
+                                </div>
+                                <div className="field required">
+                                    <label>City</label>
+                                    <input type="text" name="" placeholder="City" />
+                                </div>
+                            </div>
+                            <div className="two fields">
+                                <div className="field required">
+                                    <label>Contact Name</label>
+                                    <input type="text" name="" placeholder="Name" />
+                                </div>
+                                <div className="field required">
+                                    <label>Contact email</label>
+                                    <input type="email" name="" placeholder="Email" />
+                                </div>
+                            </div>
+                            <div className="ui grid">
+                                <div className="sixteen wide column right aligned">
+                                    <span className="smallText">*compulsory fields</span>
+                                </div>
+                                <div className="sixteen wide column center aligned paddingT0">
+                                    <div className="ui button">Add Comapny and invite</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </Modal.Description>
         </Modal.Content>
-        <Modal.Actions>
-            <div className="ui grid">
-                <div className="sixteen wide column right aligned hideMobile">
-                    <div className="ui button basic blue negative">Cancel</div>
-                    <div className="ui button positive">Send</div>
-                </div>
-            </div>
-        </Modal.Actions>
     </Modal>
 )
 
-export default InviteColleaguesModel;
+export default CompanyModel;

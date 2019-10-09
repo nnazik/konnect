@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import 'semantic-ui-css/semantic.min.css';
-import '../../assets/css/main.css';
+import CompanyModel from '../CompanyModel';
+import TimeWindowAccordion from '../../components/TimeWindowAccordion';
 
 class EventExhibitors extends Component {
 
@@ -34,7 +34,8 @@ class EventExhibitors extends Component {
                                     <div className="ui dividing header">
                                         <h3>Exhibition Time windows <i className="cog icon"></i><i className="sitemap icon"></i><i className="users icon"></i></h3>
                                     </div>
-                                    <div className="ui styled fluid accordion parentAccordion">
+                                    <TimeWindowAccordion/>
+                                    {/* <div className="ui styled fluid accordion parentAccordion">
                                         <div className="title">
                                             <div className="ui grid stackable">
                                                 <div className="sixteen wide column">
@@ -206,7 +207,7 @@ class EventExhibitors extends Component {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                             <div className="sixteen wide column">
@@ -248,7 +249,8 @@ class EventExhibitors extends Component {
                                                     </div>
                                                     <div className="ui grid center aligned">
                                                         <div className="sixteen wide column">
-                                                            <div className="ui button basic blue fluid addClient hasModal" data-modal="client"><i className="plus circle icon"></i>Add Exhibitor</div>
+                                                            {/* <div className="ui button basic blue fluid addClient hasModal" data-modal="client"><i className="plus circle icon"></i>Add Exhibitor</div> */}
+                                                            <CompanyModel type="exhibitor"/>
                                                         </div>
                                                     </div>
                                                 </div>

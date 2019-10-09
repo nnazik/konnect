@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import '../../assets/css/main.css';
+import CompanyModel from '../CompanyModel';
 
 class EventVenue extends Component {
 
@@ -25,6 +26,7 @@ class EventVenue extends Component {
                     <div className="sixteen wide column">
                         <div className="marginT10"></div>
                         <div className="ui button compact addNewVenue addToPanel"><i className="plus circle icon"></i><span className="hideMobile">Add Venue</span></div>
+                        
                         <h3 id="venuesAnchor" className="ui dividing header">Venues</h3>
                         <div className="ui styled fluid accordion parentAccordion parentAccordionVenue">
                             <div className="title active">
@@ -46,7 +48,8 @@ class EventVenue extends Component {
                                                 </div>
                                                 <div className="ui grid center aligned">
                                                     <div className="sixteen wide column">
-                                                        <div className="ui button basic blue fluid addClient hasModal" data-modal="client"><i className="plus circle icon"></i>Add Venue</div>
+                                                        {/* <div className="ui button basic blue fluid addClient hasModal" data-modal="client"><i className="plus circle icon"></i>Add Venue</div> */}
+                                                        <CompanyModel type="venue"/>
                                                     </div>
                                                 </div>
                                             </div>
