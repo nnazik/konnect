@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import '../../assets/css/main.css';
 import CompanyModel from '../CompanyModel';
+import { Checkbox } from 'semantic-ui-react';
 
 class EventClient extends Component {
 
@@ -15,10 +16,11 @@ class EventClient extends Component {
                                 <div className="ui dividing header">
                                     <h3>Event Management Company <i className="icon globe"></i></h3>
                                 </div>
-                                <div className="ui checkbox">
+                                {/* <div className="ui checkbox">
                                     <input type="checkbox" className="hidden" tabIndex="0" />
                                     <label>My company</label>
-                                </div>
+                                </div> */}
+                                <Checkbox className="hidden" label="My company"/>
                             </div>
                             <div className="ui grid center aligned">
                                 <div className="sixteen wide column">

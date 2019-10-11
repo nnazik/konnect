@@ -21,7 +21,7 @@ class TimeWindow extends Component {
                 <div className="field transition visible">
                     <div className="ui checkbox">
                         <input type="checkbox" tabIndex="0" className="hidden" />
-                        <label>Same as venue</label>
+                        <label>Same as {this.props.method}</label>
                     </div>
                 </div>
                 <div className="transition visible">

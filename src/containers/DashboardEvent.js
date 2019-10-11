@@ -1,11 +1,4 @@
 import React, { Component } from 'react';
-import 'semantic-ui-css/semantic.min.css';
-import '../assets/css/main.css';
-// import $ from 'jquery';
-// import Moment from 'react-moment';
-// import map from 'underscore';
-import 'react-calendar';
-import 'clndr/';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 

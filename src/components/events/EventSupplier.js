@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CompanyModel from '../CompanyModel';
+import TimeWindowAccordion from '../../components/TimeWindowAccordion';
 
 class EventSuppliers extends Component {
 
@@ -93,7 +94,8 @@ class EventSuppliers extends Component {
                                                     <div className="ui dividing header">
                                                         <h3>Supplier Time Windows <i className="cog icon"></i><i className="sitemap icon"></i><i className="building icon"></i></h3>
                                                     </div>
-                                                    <div className="ui styled accordion">
+                                                    <TimeWindowAccordion method={"venue"}/>
+                                                    {/* <div className="ui styled accordion">
                                                         <div className="title">
                                                             <div className="ui grid stackable">
                                                                 <div className="sixteen wide column">
@@ -265,7 +267,7 @@ class EventSuppliers extends Component {
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div> */}
                                                 </div>
                                             </div>
                                             <div className="sixteen wide column saveButtons paddingT0">

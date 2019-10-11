@@ -2,8 +2,12 @@ import React, { Component } from 'react'
 import { Accordion, Icon } from 'semantic-ui-react'
 import TimeWindow from './TimeWindow';
 
-export default class AccordionExampleStandard extends Component {
-    state = { activeIndex: 0 }
+export default class TimeWindowAccordion extends Component {
+    
+    state = { 
+        activeIndex: 0,
+        method: this.props.method     
+    }
 
     handleClick = (e, titleProps) => {
         const { index } = titleProps
@@ -15,7 +19,6 @@ export default class AccordionExampleStandard extends Component {
 
     render() {
         const { activeIndex } = this.state
-
         return (
             <Accordion className="ui styled fluid accordion parentAccordion">
                 <Accordion.Title
@@ -27,7 +30,7 @@ export default class AccordionExampleStandard extends Component {
                     Bump In
                 </Accordion.Title>
                 <Accordion.Content active={activeIndex === 0}>
-                    <TimeWindow type={"bumpin"}/>
+                    <TimeWindow type={"bumpin"} method={this.state.method}/>
                 </Accordion.Content>
 
                 <Accordion.Title
@@ -39,7 +42,7 @@ export default class AccordionExampleStandard extends Component {
                     Exhibition
                 </Accordion.Title>
                 <Accordion.Content active={activeIndex === 1}>
-                    <TimeWindow type={"exhibition"}/>
+                    <TimeWindow type={"exhibition"} method={this.state.method}/>
                 </Accordion.Content>
 
                 <Accordion.Title
@@ -51,7 +54,7 @@ export default class AccordionExampleStandard extends Component {
                     Bump Out
                 </Accordion.Title>
                 <Accordion.Content active={activeIndex === 2}>
-                    <TimeWindow type={"bumpout"}/>
+                    <TimeWindow type={"bumpout"} method={this.state.method}/>
                 </Accordion.Content>
             </Accordion>
         )

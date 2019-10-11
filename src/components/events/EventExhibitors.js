@@ -34,7 +34,7 @@ class EventExhibitors extends Component {
                                     <div className="ui dividing header">
                                         <h3>Exhibition Time windows <i className="cog icon"></i><i className="sitemap icon"></i><i className="users icon"></i></h3>
                                     </div>
-                                    <TimeWindowAccordion/>
+                                    <TimeWindowAccordion method={"venue"}/>
                                     {/* <div className="ui styled fluid accordion parentAccordion">
                                         <div className="title">
                                             <div className="ui grid stackable">
@@ -287,7 +287,8 @@ class EventExhibitors extends Component {
                                                     <div className="ui dividing header">
                                                         <h3>Exhibitor Specific Time windows <i className="cog icon"></i><i className="sitemap icon"></i><i className="building icon"></i></h3>
                                                     </div>
-                                                    <div className="ui styled accordion">
+                                                    <TimeWindowAccordion method={"exhibition"}/>
+                                                    {/* <div className="ui styled accordion">
                                                         <div className="title">
                                                             <div className="ui grid stackable">
                                                                 <div className="sixteen wide column">
@@ -459,7 +460,7 @@ class EventExhibitors extends Component {
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div> */}
                                                 </div>
                                             </div>
                                             <div className="sixteen wide column saveButtons paddingT0">
