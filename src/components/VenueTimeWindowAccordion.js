@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Accordion, Icon } from 'semantic-ui-react'
 import TimeWindow from './TimeWindow';
 
-export default class TimeWindowAccordion extends Component {
+export default class VenueTimeWindowAccordion extends Component {
     
     state = { 
         activeIndex: 0,
@@ -27,10 +27,10 @@ export default class TimeWindowAccordion extends Component {
                     onClick={this.handleClick}
                 >
                     <Icon name='dropdown' />
-                    Bump In
+                    Pre Event Access
                 </Accordion.Title>
                 <Accordion.Content active={activeIndex === 0}>
-                    <TimeWindow type={"bumpin"} method={this.state.method}/>
+                    <TimeWindow type={"preevent"} method={this.state.method}/>
                 </Accordion.Content>
 
                 <Accordion.Title
@@ -39,10 +39,10 @@ export default class TimeWindowAccordion extends Component {
                     onClick={this.handleClick}
                 >
                     <Icon name='dropdown' />
-                    Exhibition
+                    Event Time
                 </Accordion.Title>
                 <Accordion.Content active={activeIndex === 1}>
-                    <TimeWindow type={"exhibition"} method={this.state.method}/>
+                    <TimeWindow type={"eventtime"} method={this.state.method}/>
                 </Accordion.Content>
 
                 <Accordion.Title
@@ -51,10 +51,10 @@ export default class TimeWindowAccordion extends Component {
                     onClick={this.handleClick}
                 >
                     <Icon name='dropdown' />
-                    Bump Out
+                    Post Event Access
                 </Accordion.Title>
                 <Accordion.Content active={activeIndex === 2}>
-                    <TimeWindow type={"bumpout"} method={this.state.method}/>
+                    <TimeWindow type={"postevent"} method={this.state.method}/>
                 </Accordion.Content>
             </Accordion>
         )

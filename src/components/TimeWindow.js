@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Checkbox } from 'semantic-ui-react';
 import { DateInput,TimeInput } from 'semantic-ui-calendar-react';
 
 class TimeWindow extends Component {
@@ -19,10 +20,13 @@ class TimeWindow extends Component {
         return (
             <div>
                 <div className="field transition visible">
-                    <div className="ui checkbox">
+                    {/* <div className="ui checkbox">
                         <input type="checkbox" tabIndex="0" className="hidden" />
                         <label>Same as {this.props.method}</label>
-                    </div>
+                    </div> */}
+                    {
+                        (this.props.method!=null)?<Checkbox tabIndex="0" label={"Same as "+ this.props.method}/>:<div></div>
+                    }
                 </div>
                 <div className="transition visible">
                     <div className="item">
@@ -68,6 +72,9 @@ class TimeWindow extends Component {
                                         switch (this.props.type) {
                                             case "bumpin": return 'Add bump-in date';
                                             case "exhibition": return 'Add Exhibition date';
+                                            case "eventtime": return 'Add Event Time date';
+                                            case "preevent": return 'Add Pre Event Access date';
+                                            case "postevent": return 'Add Post Event Access date';
                                             default: return 'Add bump-out date'
                                         }
                                     })()}
