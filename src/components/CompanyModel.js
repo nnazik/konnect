@@ -1,6 +1,5 @@
 import React from 'react'
 import { Modal } from 'semantic-ui-react'
-import '../assets/css/main.css';
 
 const CompanyModel = (props) => (
     

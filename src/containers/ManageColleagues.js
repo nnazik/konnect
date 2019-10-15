@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import 'semantic-ui-css/semantic.min.css';
-import '../assets/css/main.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ProfileImg1 from '../assets/img/elliot.jpg';

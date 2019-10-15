@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import 'semantic-ui-css/semantic.min.css';
-import '../../assets/css/main.css';
 import proImg from '../../assets/img/joe.jpg';
 
 class ManageConnectionCompanies extends Component {

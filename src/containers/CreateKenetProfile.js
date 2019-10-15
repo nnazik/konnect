@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../assets/css/main.css';
 import PersonalDetails from '../components/PersonalDetails';
 import CreateKenetProfile1 from '../components/CreateKenetProfile1';
 import CreateKenetProfile2 from '../components/CreateKenetProfile2';

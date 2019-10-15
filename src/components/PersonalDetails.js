@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../assets/css/main.css';
 
 class PersonalDetails extends Component {
 
