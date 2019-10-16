@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Checkbox } from 'semantic-ui-react';
 
 class platformSearch extends Component {
 
@@ -28,74 +29,47 @@ class platformSearch extends Component {
                                                     <div className="ui four column grid regionOptions">
                                                         <div className="column">
                                                             <div className="field">
-                                                                <div className="ui checkbox">
-                                                                    <input type="checkbox" className="hidden" tabIndex="0" />
-                                                                    <label>APAC</label>
-                                                                </div>
+                                                                <Checkbox className="hidden" label="APAC" tabIndex="0" />
                                                             </div>
                                                         </div>
                                                         <div className="column">
                                                             <div className="field">
-                                                                <div className="ui checkbox">
-                                                                    <input type="checkbox" className="hidden" tabIndex="0" />
-                                                                    <label>Asia</label>
-                                                                </div>
+                                                                <Checkbox className="hidden" label="Asia" tabIndex="0" />
                                                             </div>
                                                         </div>
                                                         <div className="column">
                                                             <div className="field">
-                                                                <div className="ui checkbox">
-                                                                    <input type="checkbox" className="hidden" tabIndex="0" />
-                                                                    <label>Europe</label>
-                                                                </div>
+                                                                <Checkbox className="hidden" label="Europe" tabIndex="0" />
                                                             </div>
                                                         </div>
                                                         <div className="column">
                                                             <div className="field">
-                                                                <div className="ui checkbox">
-                                                                    <input type="checkbox" className="hidden" tabIndex="0" />
-                                                                    <label>MENA</label>
-                                                                </div>
+                                                                <Checkbox className="hidden" label="MENA" tabIndex="0" />
                                                             </div>
                                                         </div>
                                                         <div className="column">
                                                             <div className="field">
-                                                                <div className="ui checkbox">
-                                                                    <input type="checkbox" className="hidden" tabIndex="0" />
-                                                                    <label>North America</label>
-                                                                </div>
+                                                                <Checkbox className="hidden" label="North America" tabIndex="0" />
                                                             </div>
                                                         </div>
                                                         <div className="column">
                                                             <div className="field">
-                                                                <div className="ui checkbox">
-                                                                    <input type="checkbox" className="hidden" tabIndex="0" />
-                                                                    <label>Central America & Caribbean</label>
-                                                                </div>
+                                                                <Checkbox className="hidden" label="Central America & Caribbean" tabIndex="0" />
                                                             </div>
                                                         </div>
                                                         <div className="column">
                                                             <div className="field">
-                                                                <div className="ui checkbox">
-                                                                    <input type="checkbox" className="hidden" tabIndex="0" />
-                                                                    <label>South America</label>
-                                                                </div>
+                                                                <Checkbox className="hidden" label="South America" tabIndex="0" />
                                                             </div>
                                                         </div>
                                                         <div className="column">
                                                             <div className="field">
-                                                                <div className="ui checkbox">
-                                                                    <input type="checkbox" className="hidden" tabIndex="0" />
-                                                                    <label>Sub-Saharan Africa</label>
-                                                                </div>
+                                                                <Checkbox className="hidden" label="Sub-Saharan Africa" tabIndex="0" />
                                                             </div>
                                                         </div>
                                                         <div className="column">
                                                             <div className="field">
-                                                                <div className="ui checkbox">
-                                                                    <input type="checkbox" className="hidden" tabIndex="0" />
-                                                                    <label>Global</label>
-                                                                </div>
+                                                                <Checkbox className="hidden" label="Global" tabIndex="0" />
                                                             </div>
                                                         </div>
                                                     </div>
