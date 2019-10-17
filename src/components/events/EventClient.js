@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import CompanyModel from '../CompanyModel';
 import { Checkbox } from 'semantic-ui-react';
 import EventClientToggle from '../ui/EventClientToggle'
+import EventClientCompanyCard from '../EventClientCompanyCard'
+import EventClientContactCard from '../EventClientContactCard'
 
 class EventClient extends Component {
 
@@ -16,27 +18,32 @@ class EventClient extends Component {
                                     <h3>Client Company <i className="globe icon"></i></h3>
                                 </div>
                                 <Checkbox className="hidden" label="My company" />
-                                <p>{this.props.data}</p>
                             </div>
-                            <div className="kcpCardContainer"></div>
-                            <div className="ui grid center aligned">
-                                <div className="sixteen wide column">
-                                    <CompanyModel type="client" />
-                                </div>
-                            </div>
+                            {
+                                (this.props.data == 'Save') ? <div className="kcpCardContainer"><EventClientCompanyCard /></div> :
+                                    <div className="ui grid center aligned">
+                                        <div className="sixteen wide column">
+                                            <CompanyModel type="client" />
+                                        </div>
+                                    </div>
+                            }
+
+
                         </div>
                         <div className="contactsContainer">
                             <div className="ui dividing header">
                                 <h3>Client Contacts <i className="globe icon"></i></h3>
                             </div>
-                            <div className="kipCardContainer"></div>
-                            <div className="ui grid center aligned">
-                                <div className="sixteen wide column">
-                                    <div className="ui basic button blue fluid addContacts hasModal disabled" data-modal="contacts">
-                                        <i className="plus circle icon"></i>Add Contact
+                            {
+                                (this.props.data == 'Save') ? <div className="kipCardContainer"><EventClientContactCard /></div> :
+                                    <div className="ui grid center aligned">
+                                        <div className="sixteen wide column">
+                                            <div className="ui basic button blue fluid addContacts hasModal disabled" data-modal="contacts">
+                                                <i className="plus circle icon"></i>Add Contact
                                                         </div>
-                                </div>
-                            </div>
+                                        </div>
+                                    </div>
+                            }
                         </div>
                     </div>
                     <div className="nine wide column">
@@ -54,7 +61,7 @@ class EventClient extends Component {
                             <div className="textarea" contentEditable=""></div>
                         </div>
                         <div className="field">
-                            <EventClientToggle/>
+                            <EventClientToggle />
                         </div>
                     </div>
                     <div className="sixteen wide column saveButtons paddingT0">
