@@ -7,30 +7,30 @@ import EventSuppliers from './events/EventSupplier';
 import EventExhibitors from './events/EventExhibitors';
 import EventFile from './events/EventFile';
 
-const panes = [
+const panes = status => [
   {
     menuItem: { key: 'clients', icon: 'cog', content: 'CLIENT' },
-    render: () => <Tab.Pane attached={false}><EventClient/></Tab.Pane>,
+    render: () => <Tab.Pane attached={false}><EventClient  data={status}/></Tab.Pane>,
   },
   {
     menuItem: { key: 'event manager', icon: 'sitemap', content: 'EVENT MANAGER' },
-    render: () => <Tab.Pane attached={false}><EventManager/></Tab.Pane>,
+    render: () => <Tab.Pane attached={false}><EventManager data={status} /></Tab.Pane>,
   },
   {
     menuItem: { key: 'venue', icon: 'map marker alternate', content: 'VENUE' },
-    render: () => <Tab.Pane attached={false}><EventVenue/></Tab.Pane>,
+    render: () => <Tab.Pane attached={false}><EventVenue data={status} /></Tab.Pane>,
   },
   {
     menuItem: { key: 'suppliers', icon: 'truck', content: 'SUPPLIERS' },
-    render: () => <Tab.Pane attached={false}><EventSuppliers/></Tab.Pane>,
+    render: () => <Tab.Pane attached={false}><EventSuppliers data={status} /></Tab.Pane>,
   },
   {
     menuItem: { key: 'exhibitors', icon: 'users', content: 'EXHIBITORS' },
-    render: () => <Tab.Pane attached={false}><EventExhibitors/></Tab.Pane>,
+    render: () => <Tab.Pane attached={false}><EventExhibitors data={status} /></Tab.Pane>,
   },
   {
     menuItem: { key: 'files', icon: 'file alternate', content: 'FILES' },
-    render: () => <Tab.Pane attached={false}><EventFile/></Tab.Pane>,
+    render: () => <Tab.Pane attached={false}><EventFile data={status}/></Tab.Pane>,
   },
   {
     menuItem: { key: 'timeline', icon: 'clock', content: 'TIMELINE' },
@@ -38,8 +38,8 @@ const panes = [
   },
 ]
 
-const CreateEventTab = () => (
-  <Tab menu={{ secondary: true, pointing: true }} panes={panes} />
+const CreateEventTab = (props) => (
+  <Tab menu={{ secondary: true, pointing: true }}  panes={panes(props.data)} />
 )
 
 export default CreateEventTab;

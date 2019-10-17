@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CompanyModel from '../CompanyModel';
 import { Checkbox } from 'semantic-ui-react';
+import EventClientToggle from '../ui/EventClientToggle'
 
 class EventClient extends Component {
 
@@ -14,19 +15,12 @@ class EventClient extends Component {
                                 <div className="ui dividing header">
                                     <h3>Client Company <i className="globe icon"></i></h3>
                                 </div>
-                                {/* <div className="ui checkbox">
-                                    <input type="checkbox" className="hidden" />
-                                    
-                                    {/* <label>My company</label>
-                                </div> */}
-                                <Checkbox className="hidden" label="My company"/>
+                                <Checkbox className="hidden" label="My company" />
+                                <p>{this.props.data}</p>
                             </div>
                             <div className="kcpCardContainer"></div>
                             <div className="ui grid center aligned">
                                 <div className="sixteen wide column">
-                                    {/* <div className="ui button basic blue fluid addClient hasModal" data-modal="client">
-                                        <i className="plus circle icon"></i>Add Client
-                                                    </div> */}
                                     <CompanyModel type="client" />
                                 </div>
                             </div>
@@ -60,10 +54,7 @@ class EventClient extends Component {
                             <div className="textarea" contentEditable=""></div>
                         </div>
                         <div className="field">
-                            <div className="ui toggle checkbox toggleOnColumn">
-                                <input type="checkbox" name="exhibitors" className="hidden" tabIndex="0" />
-                                <label>Event has exhibitors</label>
-                            </div>
+                            <EventClientToggle/>
                         </div>
                     </div>
                     <div className="sixteen wide column saveButtons paddingT0">
