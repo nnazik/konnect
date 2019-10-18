@@ -11,31 +11,31 @@ class EventClientContactCard extends Component {
 
     render() {
         return (
-            <div class="ui one column grid stackable">
-                <div class="column">
-                    <div class="contactRole">{this.state.ContactLabel} <div class="ui circular compact mini basic icon button editProfileBtn editableObjectHidden inactive hasModal" data-modal="editProfile"><i class="pencil alternate icon"></i></div>
+            <div className="ui one column grid stackable">
+                <div className="column">
+                    <div className="contactRole">{this.state.ContactLabel} <div className="ui circular compact mini basic icon button editProfileBtn editableObjectHidden inactive hasModal" data-modal="editProfile"><i className="pencil alternate icon"></i></div>
                     </div>
-                    <div class="ui fluid card">
-                        <div class="content">
-                            <img class="right floated mini ui image" alt="" src={ProImage} />
-                            <div class="header">
-                                <a href="/VPP.html" target="_blank">{this.state.CompanyName}</a>
+                    <div className="ui fluid card">
+                        <div className="content">
+                            <img className="right floated mini ui image" alt="" src={ProImage} />
+                            <div className="header">
+                                <a href="/VPP.html" target="">{this.state.CompanyName}</a>
                             </div>
-                            <div class="meta">
+                            <div className="meta">
                                 {this.state.Position}
                             </div>
-                            <div class="description">
+                            <div className="description">
                                 mail@mail.com<br></br>
                                 1234 5678
                             </div>
                         </div>
-                        <div class="extra content editableObject">
-                            <div class="ui grid">
-                                <div class="eight wide column">
+                        <div className="extra content editableObject">
+                            <div className="ui grid">
+                                <div className="eight wide column">
 
                                 </div>
-                                <div class="eight wide column right aligned">
-                                    <div class="ui circular compact mini basic button confirmRemove hasModal" data-modal="removeModal"><i class="trash alternate icon"></i>Remove</div>
+                                <div className="eight wide column right aligned">
+                                    <div className="ui circular compact mini basic button confirmRemove hasModal" data-modal="removeModal"><i className="trash alternate icon"></i>Remove</div>
                                 </div>
                             </div>
                         </div>
