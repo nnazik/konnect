@@ -9,11 +9,10 @@ class EventClient extends Component {
 
     state = {
         KCP_Name: 'Steve jobs',
-        KCP_Name: 'Apple co',
+        KIP_Name: 'Apple co',
         Date: '2019/10/25',
         CreateTime: '09.00 a.m',
         Editable: 'field'
-
     }
 
     componentDidUpdate() {
@@ -81,10 +80,10 @@ class EventClient extends Component {
                         </div>
                         {
                             (this.props.data == 'Save') ? <div><div className="ui dividing header">
-                                <h3>Client Internal Notes <i class="building icon"></i></h3>
+                                <h3>Client Internal Notes <i className="building icon"></i></h3>
                             </div>
                                 <div className={this.state.Editable}>
-                                    <div class="textarea" contenteditable="">
+                                    <div className="textarea" contentEditable="">
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis ipsum aut sit modi sequi voluptatem, a quam beatae, sapiente blanditiis id maxime! In reiciendis nemo illo tempora iusto facere
                                         minus!
                                     </div>

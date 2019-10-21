@@ -3,6 +3,19 @@ import VenueAccordion from '../VenueAccordion'
 
 class EventVenue extends Component {
 
+
+    state = {
+        Editable: 'field'
+    }
+
+    componentDidUpdate() {
+        if (this.props.data === 'Save') {
+            if (this.state.Editable === 'field') {
+                this.setState({ Editable: 'field disabled editable' })
+            }
+        }
+    }
+
     render() {
         return (
             <div>
@@ -13,7 +26,7 @@ class EventVenue extends Component {
                                 <div className="ui dividing header">
                                     <h3>Notes to All Venues <i className="cog icon"></i><i className="sitemap icon"></i><i className="map marker alternate icon"></i></h3>
                                 </div>
-                                <div className="field">
+                                <div className={this.state.Editable}>
                                     <div className="textarea" contentEditable=""></div>
                                 </div>
                             </div>
@@ -27,7 +40,7 @@ class EventVenue extends Component {
                         
                         <h3 id="venuesAnchor" className="ui dividing header">Venues</h3>
                         <div className="ui styled fluid accordion parentAccordion parentAccordionVenue">
-                            <VenueAccordion/>
+                            <VenueAccordion status={this.props.data}/>
                         </div>
                     </div>
                 </div>

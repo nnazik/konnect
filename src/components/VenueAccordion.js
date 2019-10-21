@@ -2,9 +2,17 @@ import React, { Component } from 'react'
 import { Accordion, Icon } from 'semantic-ui-react'
 import CompanyModel from '../components/CompanyModel';
 import VenueTimeWindowAccordion from '../components/VenueTimeWindowAccordion';
+import EventClientCompanyCard from '../components/EventClientCompanyCard'
+import EventClientContactCard from '../components/EventClientContactCard'
 
 export default class VenueAccordion extends Component {
-  state = { activeIndex: 0 }
+  state = {
+    activeIndex: 0,
+    KCP_Name: 'Steve jobs',
+    Date: '2019/10/25',
+    CreateTime: '09.00 a.m',
+    Editable: 'field'
+  }
 
   handleClick = (e, titleProps) => {
     const { index } = titleProps
@@ -12,6 +20,14 @@ export default class VenueAccordion extends Component {
     const newIndex = activeIndex === index ? -1 : index
 
     this.setState({ activeIndex: newIndex })
+  }
+
+  componentDidUpdate() {
+    if (this.props.status === 'Save') {
+      if (this.state.Editable === 'field') {
+        this.setState({ Editable: 'field disabled editable' })
+      }
+    }
   }
 
   render() {
@@ -35,26 +51,37 @@ export default class VenueAccordion extends Component {
                   <div className="ui dividing header">
                     <h3>Venue Company <i className="globe icon"></i></h3>
                   </div>
-                  <div className="kcpCardContainer">
-                  </div>
-                  <div className="ui grid center aligned">
-                    <div className="sixteen wide column">
-                      <CompanyModel type="venue" />
-                    </div>
-                  </div>
+                  {
+                    (this.props.status === 'Save') ? <div className="kcpCardContainer"><EventClientCompanyCard /></div> :
+                      <div className="ui grid center aligned">
+                        <div className="sixteen wide column">
+                          <CompanyModel type="venue" />
+                        </div>
+                      </div>
+                  }
                 </div>
                 <div className="contactsContainer">
                   <div className="ui dividing header">
                     <h3>Venue Contacts <i className="globe icon"></i></h3>
                   </div>
-                  <div className="kipCardContainer">
+                  {/* <div className="kipCardContainer">
                   </div>
                   <div className="ui grid stackable center aligned">
                     <div className="sixteen wide column">
                       <div className="ui basic button blue fluid addContacts hasModal disabled" data-modal="contacts">
                         <i className="plus circle icon"></i>Add Contact</div>
                     </div>
-                  </div>
+                  </div> */}
+                  {
+                    (this.props.status == 'Save') ? <div className="kipCardContainer"><EventClientContactCard /></div> :
+                      <div className="ui grid center aligned">
+                        <div className="sixteen wide column">
+                          <div className="ui basic button blue fluid addContacts hasModal disabled" data-modal="contacts">
+                            <i className="plus circle icon"></i>Add Contact
+                                            </div>
+                        </div>
+                      </div>
+                  }
                 </div>
               </div>
               <div className="nine wide column">

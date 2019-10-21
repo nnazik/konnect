@@ -1,8 +1,26 @@
 import React, { Component } from 'react';
 import CompanyModel from '../CompanyModel';
 import { Checkbox } from 'semantic-ui-react';
+import EventClientCompanyCard from '../EventClientCompanyCard'
+import EventClientContactCard from '../EventClientContactCard'
 
 class EventClient extends Component {
+
+    state = {
+        KCP_Name: 'Steve jobs',
+        KCP_Name: 'Apple co',
+        Date: '2019/10/25',
+        CreateTime: '09.00 a.m',
+        Editable: 'field'
+    }
+
+    componentDidUpdate() {
+        if (this.props.data === 'Save') {
+            if (this.state.Editable === 'field') {
+                this.setState({ Editable: 'field disabled editable' })
+            }
+        }
+    }
 
     render() {
         return (
@@ -14,40 +32,38 @@ class EventClient extends Component {
                                 <div className="ui dividing header">
                                     <h3>Event Management Company <i className="icon globe"></i></h3>
                                 </div>
-                                {/* <div className="ui checkbox">
-                                    <input type="checkbox" className="hidden" tabIndex="0" />
-                                    <label>My company</label>
-                                </div> */}
-                                <Checkbox className="hidden" label="My company"/>
+                                <Checkbox className="hidden" label="My company" />
                             </div>
-                            <div className="ui grid center aligned">
-                                <div className="sixteen wide column">
-                                    {/* <div className="ui button basic blue fluid addClient hasModal" data-modal="client">
-                                        <i className="plus circle icon"></i>Add Management Company
-                                                        </div> */}
-                                                        <CompanyModel type="manager"/>
-                                </div>
-                            </div>
+                            {
+                                (this.props.data == 'Save') ? <div className="kcpCardContainer"><EventClientCompanyCard /></div> :
+                                    <div className="ui grid center aligned">
+                                        <div className="sixteen wide column">
+                                            <CompanyModel type="manager" />
+                                        </div>
+                                    </div>
+                            }
                         </div>
                         <div className="contactsContainer">
                             <div className="ui dividing header">
                                 <h3>Event Management Contacts <i className="icon globe"></i></h3>
                             </div>
-                            <div className="kipCardContainer"></div>
-                            <div className="ui grid center aligned">
-                                <div className="sixteen wide column">
-                                    <div className="ui basic button blue fluid addContacts hasModal disabled" data-modal="contacts">
-                                        <i className="plus circle icon"></i>Add Contact
-                                                        </div>
-                                </div>
-                            </div>
+                            {
+                                (this.props.data == 'Save') ? <div className="kipCardContainer"><EventClientContactCard /></div> :
+                                    <div className="ui grid center aligned">
+                                        <div className="sixteen wide column">
+                                            <div className="ui basic button blue fluid addContacts hasModal disabled" data-modal="contacts">
+                                                <i className="plus circle icon"></i>Add Contact
+                                            </div>
+                                        </div>
+                                    </div>
+                            }
                         </div>
                     </div>
                     <div className="nine wide column">
                         <div className="ui dividing header">
                             <h3>Event Management Requirements <i className="icon globe"></i></h3>
                         </div>
-                        <div className="field">
+                        <div className={this.state.Editable}>
                             <div className="textarea" contentEditable=""></div>
                         </div>
                     </div>

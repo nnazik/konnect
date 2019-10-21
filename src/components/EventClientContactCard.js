@@ -29,16 +29,16 @@ class EventClientContactCard extends Component {
                                 1234 5678
                             </div>
                         </div>
-                        <div className="extra content editableObject">
+                        
+                        {/* <div className="extra content editableObject">
                             <div className="ui grid">
                                 <div className="eight wide column">
-
                                 </div>
                                 <div className="eight wide column right aligned">
                                     <div className="ui circular compact mini basic button confirmRemove hasModal" data-modal="removeModal"><i className="trash alternate icon"></i>Remove</div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
