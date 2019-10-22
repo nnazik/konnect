@@ -8,7 +8,7 @@ class EventClient extends Component {
 
     state = {
         KCP_Name: 'Steve jobs',
-        KCP_Name: 'Apple co',
+        KIP_Name: 'Apple co',
         Date: '2019/10/25',
         CreateTime: '09.00 a.m',
         Editable: 'field'

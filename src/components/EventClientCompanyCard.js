@@ -18,7 +18,7 @@ class EventClientContactCard extends Component {
                             <a href="/VCP.html" target="">{this.state.CompanyName}</a>
                         </div>
                         <div className="meta">
-                            <a href="https://goo.gl/maps/n4DPECjGtgno53FL9" target="_blank"><i className="map marker alternate icon"></i>Sydney</a><span>|</span><i className="phone icon"></i>9876 5432
+                            <a href="https://goo.gl/maps/n4DPECjGtgno53FL9" target=""><i className="map marker alternate icon"></i>Sydney</a><span>|</span><i className="phone icon"></i>9876 5432
                         </div>
                     </div>
                     <div className="extra content editableObject">

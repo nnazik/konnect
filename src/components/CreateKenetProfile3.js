@@ -33,12 +33,12 @@ class CreateKenetProfile3 extends Component {
                         <div className="column">
                             <div className="ui fluid card">
                                 <div className="content left aligned">
-                                    <img className="right floated mini ui image" src={imgkcp3}/>
+                                    <img className="right floated mini ui image" alt="" src={imgkcp3}/>
                                     <div className="header">
                                         Company Name
                                     </div>
                                     <div className="meta">
-                                        <a href="https://goo.gl/maps/n4DPECjGtgno53FL9" target="_blank"><i className="map marker alternate icon"></i>Sydney</a><span>|</span><i className="phone icon"></i>9876 5432
+                                        <a href="https://goo.gl/maps/n4DPECjGtgno53FL9" target=""><i className="map marker alternate icon"></i>Sydney</a><span>|</span><i className="phone icon"></i>9876 5432
                                     </div>
                                     <div className="description">
                                         Lorem, ipsum dolor sit amet consectetur adipisicing elit.

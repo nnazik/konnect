@@ -11,7 +11,7 @@ export default class VenueAccordion extends Component {
     KCP_Name: 'Steve jobs',
     Date: '2019/10/25',
     CreateTime: '09.00 a.m',
-    Editable: 'field'
+    Editable: 'field',
   }
 
   handleClick = (e, titleProps) => {
@@ -41,7 +41,7 @@ export default class VenueAccordion extends Component {
           onClick={this.handleClick}
         >
           <Icon name='dropdown' />
-          Venue 1
+          Venue 1                     
         </Accordion.Title>
         <Accordion.Content active={activeIndex === 0}>
           <form className="ui form">

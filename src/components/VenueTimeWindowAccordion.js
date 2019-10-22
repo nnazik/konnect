@@ -6,7 +6,11 @@ export default class VenueTimeWindowAccordion extends Component {
     
     state = { 
         activeIndex: 0,
-        method: this.props.method     
+        method: this.props.method,
+        End : '01.00 p.m',
+        Timezone:'GMT+5:30',
+        CreateTime: '09.00 a.m',
+        Date: '2019/10/25',     
     }
 
     handleClick = (e, titleProps) => {
@@ -27,7 +31,7 @@ export default class VenueTimeWindowAccordion extends Component {
                     onClick={this.handleClick}
                 >
                     <Icon name='dropdown' />
-                    Pre Event Access
+                    Pre Event Access <span className="dateStartEndContainer">{this.state.Date}, {this.state.CreateTime} - {this.state.End} | {this.state.Timezone}</span><span className="dateStartEndContainer">{this.state.Date}, {this.state.CreateTime} - {this.state.End} | {this.state.Timezone}</span>
                 </Accordion.Title>
                 <Accordion.Content active={activeIndex === 0}>
                     <TimeWindow type={"preevent"} method={this.state.method}/>
