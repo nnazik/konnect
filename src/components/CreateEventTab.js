@@ -3,7 +3,7 @@ import { Tab } from 'semantic-ui-react'
 import EventClient from './events/EventClient';
 import EventManager from './events/EventManager';
 import EventVenue from './events/EventVenue';
-import EventSuppliers from './events/EventSupplier';
+import EventSupplierTab from './EventSupplierTab';
 import EventExhibitors from './events/EventExhibitors';
 import EventFile from './events/EventFile';
 
@@ -22,7 +22,7 @@ const panes = status => [
   },
   {
     menuItem: { key: 'suppliers', icon: 'truck', content: 'SUPPLIERS' },
-    render: () => <Tab.Pane attached={false}><EventSuppliers data={status} /></Tab.Pane>,
+    render: () => <Tab.Pane attached={false}><EventSupplierTab data={status} /></Tab.Pane>,
   },
   {
     menuItem: { key: 'exhibitors', icon: 'users', content: 'EXHIBITORS' },
