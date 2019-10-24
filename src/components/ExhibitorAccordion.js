@@ -20,14 +20,14 @@ export default class ExhibitorAccordion extends Component {
         return (
             <Accordion>
                 <Accordion.Title
-                    active={activeIndex === 0}
-                    index={0}
+                    active={activeIndex === 1}
+                    index={1}
                     onClick={this.handleClick}
                 >
                     <Icon name='dropdown' />
                     Exhibitor 1
                 </Accordion.Title>
-                <Accordion.Content active={activeIndex === 0}>
+                <Accordion.Content active={activeIndex === 1}>
                     <form className="ui form">
                         <div className="ui grid stackable">
                             <div className="seven wide column">

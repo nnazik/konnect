@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
-import { Accordion, Icon } from 'semantic-ui-react'
+import { Accordion, Icon, Popup} from 'semantic-ui-react'
 import TimeWindow from './TimeWindow';
 
 export default class VenueTimeWindowAccordion extends Component {
-    
-    state = { 
+
+    state = {
         activeIndex: 0,
         method: this.props.method,
-        End : '01.00 p.m',
-        Timezone:'GMT+5:30',
+        End: '01.00 p.m',
+        Timezone: 'GMT+5:30',
         CreateTime: '09.00 a.m',
-        Date: '2019/10/25',     
+        Date: '2019/10/25',
     }
 
     handleClick = (e, titleProps) => {
@@ -24,29 +24,27 @@ export default class VenueTimeWindowAccordion extends Component {
     render() {
         const { activeIndex } = this.state
         return (
-            <Accordion className="ui styled fluid">
-                <Accordion.Title
-                    active={activeIndex === 0}
-                    index={0}
-                    onClick={this.handleClick}
-                >
-                    <Icon name='dropdown' />
-                    Pre Event Access <span className="dateStartEndContainer">{this.state.Date}, {this.state.CreateTime} - {this.state.End} | {this.state.Timezone}</span><span className="dateStartEndContainer">{this.state.Date}, {this.state.CreateTime} - {this.state.End} | {this.state.Timezone}</span>
-                </Accordion.Title>
-                <Accordion.Content active={activeIndex === 0}>
-                    <TimeWindow type={"preevent"} method={this.state.method}/>
-                </Accordion.Content>
-
+            <Accordion>
                 <Accordion.Title
                     active={activeIndex === 1}
                     index={1}
                     onClick={this.handleClick}
                 >
-                    <Icon name='dropdown' />
-                    Event Time
+                    <div className="ui grid stackable">
+                        <div className="sixteen wide column">
+                            <span className="titleMinWidth"><Icon name='dropdown' />Pre Event Access</span>
+                            {
+                                (this.props.status == 'Save') ? <div><span className="dateStartEndContainer">{this.state.Date}, {this.state.CreateTime} - {this.state.End} | {this.state.Timezone}</span><span className="dateStartEndContainer">{this.state.Date}, {this.state.CreateTime} - {this.state.End} | {this.state.Timezone}</span>
+                                    <Popup content='Pre Event Access Notes: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam animi illum ipsum, mollitia optio ex esse magnam iste. Doloribus aliquam maiores repudiandae nulla vel quod deleniti iure fugiat! Minima, eos?' trigger={<Icon className="popupNotes" name='edit outline' />} />
+                                </div> : <div></div>
+                            }
+                        </div>
+                    </div>
+
+
                 </Accordion.Title>
                 <Accordion.Content active={activeIndex === 1}>
-                    <TimeWindow type={"eventtime"} method={this.state.method}/>
+                    <TimeWindow type={"preevent"} method={this.state.method} />
                 </Accordion.Content>
 
                 <Accordion.Title
@@ -54,11 +52,41 @@ export default class VenueTimeWindowAccordion extends Component {
                     index={2}
                     onClick={this.handleClick}
                 >
-                    <Icon name='dropdown' />
-                    Post Event Access
+                    <div className="ui grid stackable">
+                        <div className="sixteen wide column">
+                            <span className="titleMinWidth"><Icon name='dropdown' />Event Time</span>
+                            {
+                                (this.props.status == 'Save') ? <div>
+                                    <span className="dateStartEndContainer">{this.state.Date}, {this.state.CreateTime} - {this.state.End} | {this.state.Timezone}</span>
+                                    <Popup content='Event Time Notes: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam animi illum ipsum, mollitia optio ex esse magnam iste. Doloribus aliquam maiores repudiandae nulla vel quod deleniti iure fugiat! Minima, eos?' trigger={<Icon className="popupNotes" name='edit outline' />} />
+                                </div> : <div></div>
+                            }
+                        </div>
+                    </div>
                 </Accordion.Title>
                 <Accordion.Content active={activeIndex === 2}>
-                    <TimeWindow type={"postevent"} method={this.state.method}/>
+                    <TimeWindow type={"eventtime"} method={this.state.method} />
+                </Accordion.Content>
+
+                <Accordion.Title
+                    active={activeIndex === 3}
+                    index={3}
+                    onClick={this.handleClick}
+                >
+                    <div className="ui grid stackable">
+                        <div className="sixteen wide column">
+                            <span className="titleMinWidth"><Icon name='dropdown' />Post Event Access</span>
+                            {
+                                (this.props.status == 'Save') ? <div>
+                                    <span className="dateStartEndContainer">{this.state.Date}, {this.state.CreateTime} - {this.state.End} | {this.state.Timezone}</span><span className="dateStartEndContainer">{this.state.Date}, {this.state.CreateTime} - {this.state.End} | {this.state.Timezone}</span>
+                                    <Popup content='Post Event Access Notes: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam animi illum ipsum, mollitia optio ex esse magnam iste. Doloribus aliquam maiores repudiandae nulla vel quod deleniti iure fugiat! Minima, eos?' trigger={<Icon className="popupNotes" name='edit outline' />} />
+                                </div> : <div></div>
+                            }
+                        </div>
+                    </div>
+                </Accordion.Title>
+                <Accordion.Content active={activeIndex === 3}>
+                    <TimeWindow type={"postevent"} method={this.state.method} />
                 </Accordion.Content>
             </Accordion>
         )

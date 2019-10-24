@@ -12,6 +12,8 @@ export default class VenueAccordion extends Component {
     Date: '2019/10/25',
     CreateTime: '09.00 a.m',
     Editable: 'field',
+    CompanyName: 'Apple co',
+    City: 'Newyork'
   }
 
   handleClick = (e, titleProps) => {
@@ -36,14 +38,15 @@ export default class VenueAccordion extends Component {
     return (
       <Accordion>
         <Accordion.Title
-          active={activeIndex === 0}
-          index={0}
+          active={activeIndex === 1}
+          index={1}
           onClick={this.handleClick}
         >
-          <Icon name='dropdown' />
-          Venue 1                     
+          <div className="sixteen wide column middle aligned">
+            <Icon name="dropdown" />Venue 1: {this.state.CompanyName}, {this.state.City}
+          </div>
         </Accordion.Title>
-        <Accordion.Content active={activeIndex === 0}>
+        <Accordion.Content active={activeIndex === 1}>
           <form className="ui form">
             <div className="ui grid stackable">
               <div className="seven wide column">
@@ -90,13 +93,13 @@ export default class VenueAccordion extends Component {
                     <div className="ui dividing header">
                       <h3>Venue Time Windows <i className="globe icon"></i></h3>
                     </div>
-                    <VenueTimeWindowAccordion />
+                    <VenueTimeWindowAccordion status={this.props.status} />
                   </div>
                 </div>
                 <div className="ui dividing header">
                   <h3>Venue Requirements <i className="cog icon"></i><i className="sitemap icon"></i><i className="map marker alternate icon"></i></h3>
                 </div>
-                <div className="field">
+                <div className={this.state.Editable}>
                   <div className="textarea" contentEditable=""></div>
                 </div>
               </div>

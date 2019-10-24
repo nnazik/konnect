@@ -218,7 +218,7 @@ class CompanyProfile extends Component {
                                                                 <div className="column">
                                                                     <div className="ui fluid card">
                                                                         <div className="content">
-                                                                            <img className="right floated mini ui image circular" src={StaffImg} />
+                                                                            <img className="right floated mini ui image circular" alt="" src={StaffImg} />
                                                                             <div className="header">
                                                                                 <a href="/VPP.html" target="">{this.state.Name}</a>
                                                                             </div>

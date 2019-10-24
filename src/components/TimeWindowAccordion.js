@@ -22,27 +22,15 @@ export default class TimeWindowAccordion extends Component {
         return (
             <Accordion className="ui styled fluid">
                 <Accordion.Title
-                    active={activeIndex === 0}
-                    index={0}
-                    onClick={this.handleClick}
-                >
-                    <Icon name='dropdown' />
-                    Bump In
-                </Accordion.Title>
-                <Accordion.Content active={activeIndex === 0}>
-                    <TimeWindow type={"bumpin"} method={this.state.method}/>
-                </Accordion.Content>
-
-                <Accordion.Title
                     active={activeIndex === 1}
                     index={1}
                     onClick={this.handleClick}
                 >
                     <Icon name='dropdown' />
-                    Exhibition
+                    Bump In
                 </Accordion.Title>
                 <Accordion.Content active={activeIndex === 1}>
-                    <TimeWindow type={"exhibition"} method={this.state.method}/>
+                    <TimeWindow type={"bumpin"} method={this.state.method}/>
                 </Accordion.Content>
 
                 <Accordion.Title
@@ -51,9 +39,21 @@ export default class TimeWindowAccordion extends Component {
                     onClick={this.handleClick}
                 >
                     <Icon name='dropdown' />
-                    Bump Out
+                    Exhibition
                 </Accordion.Title>
                 <Accordion.Content active={activeIndex === 2}>
+                    <TimeWindow type={"exhibition"} method={this.state.method}/>
+                </Accordion.Content>
+
+                <Accordion.Title
+                    active={activeIndex === 3}
+                    index={3}
+                    onClick={this.handleClick}
+                >
+                    <Icon name='dropdown' />
+                    Bump Out
+                </Accordion.Title>
+                <Accordion.Content active={activeIndex === 3}>
                     <TimeWindow type={"bumpout"} method={this.state.method}/>
                 </Accordion.Content>
             </Accordion>

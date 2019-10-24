@@ -37,10 +37,17 @@ class EventVenue extends Component {
                     <div className="sixteen wide column">
                         <div className="marginT10"></div>
                         <div className="ui button compact addNewVenue addToPanel"><i className="plus circle icon"></i><span className="hideMobile">Add Venue</span></div>
-                        
+
                         <h3 id="venuesAnchor" className="ui dividing header">Venues</h3>
                         <div className="ui styled fluid accordion parentAccordion parentAccordionVenue">
-                            <VenueAccordion status={this.props.data}/>
+                            <div className="insideAccordionContainer">
+                                {
+                                    (this.props.data=='Save') ? <div className="ui selection dropdown">
+                                        <div className="text"><i className="ui icon circle yellow"></i>None Allocated</div>
+                                    </div> : <div></div>
+                                }
+                                <VenueAccordion status={this.props.data} />
+                            </div>
                         </div>
                     </div>
                 </div>
